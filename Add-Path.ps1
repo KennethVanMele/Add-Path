@@ -14,11 +14,11 @@ function Add-Path {
     {
         Write-Host "Forgot drive letter?"
     }
-    elif (Test-Path $PathName)
+    elseif (Test-Path $PathName)
     {
         $oldPath=(Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
         $newPath=$oldPath + ';' + $PathName
-        Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH –Value $newPath
+        Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH â€“Value $newPath
     }
     else
     {
