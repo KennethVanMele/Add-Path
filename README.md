@@ -8,3 +8,5 @@ Install:
 5) . $env:USERPROFILE\Documents\WindowsPowerShell\Scripts\HyperVisorSwitch.ps1*
 
 *You might want to use the full path, this is not tested. + Don't forget the dot infront of 5!
+
+TODO: make module for easier install
